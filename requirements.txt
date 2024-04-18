@@ -1,0 +1,7 @@
+Flask
+Flask-SQLAlchemy
+mysqlclient
+flask_bcrypt
+flask_migrate
+Flask-login
+

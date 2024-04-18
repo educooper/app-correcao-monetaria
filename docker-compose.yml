@@ -1,0 +1,21 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mysql
+  mysql:
+    image: mysql:latest
+    container_name: 'mysql-cont'
+    hostname: 'mysql-docker'
+    environment:
+      MYSQL_DATABASE: 'correcao'
+      MYSQL_USER: 'univesp24'
+      MYSQL_PASSWORD: 'univesp24'
+      MYSQL_ROOT_PASSWORD: 'univesp24'
+    ports:
+      - "3306:3306"
+      #- "33060:33060"
+ 
