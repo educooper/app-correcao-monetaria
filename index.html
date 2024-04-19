@@ -1,15 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Correção Monetária</title>
-</head>
-<body>
-    <h2>Correção Monetária</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed mauris sit amet erat scelerisque elementum vitae quis justo. Suspendisse nec quam volutpat, dictum neque sit amet, vulputate felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed eleifend, augue sit amet cursus ultricies, elit nulla convallis leo, ut porttitor mauris ipsum eget mi. Aliquam porttitor, nulla ut ornare varius, est nibh rhoncus orci, ac sodales felis velit eu tortor. Sed nec est non nunc euismod auctor ut ut nibh. Quisque ac ultrices sem, a tristique mi. Nunc porta suscipit pharetra. In rutrum quis odio nec suscipit. Nulla luctus lectus arcu, rhoncus molestie nisl aliquam facilisis. Nam turpis lectus, imperdiet a ipsum vitae, ultricies ultricies augue. Donec eu convallis nisl, sit amet dapibus urna. Morbi scelerisque tortor dolor, vitae scelerisque tellus efficitur non. Cras ut enim mi. Praesent tristique elementum risus, non porta nisl volutpat vitae. Ut porta erat ut ex mollis, at dapibus dui fringilla.
-    <p>Donec vel sagittis metus, sed lacinia urna. Phasellus laoreet molestie sodales. Quisque congue libero et rhoncus imperdiet. In tempus sem vel leo varius, non sodales lorem condimentum. Vestibulum ac sollicitudin sapien. Morbi tincidunt leo scelerisque, luctus nunc at, sollicitudin libero. In varius erat eget hendrerit accumsan. Sed tempus euismod maximus. Aliquam vitae aliquam lorem, id varius odio.</p>
-    <p>Quisque vitae imperdiet tellus. Duis dolor ex, tincidunt rhoncus mollis sed, condimentum eget neque. Pellentesque eu mattis lectus. Vestibulum sed fermentum nunc. Nulla imperdiet fermentum est non vulputate. Sed sit amet velit dui. Nunc faucibus nisl sit amet vestibulum convallis. Vestibulum at viverra quam. Donec eu nisl ex. </p>
+{% extends "base.html" %}
+
+{% block content %}
+
+<!doctype html>
+<html>
+  <head>
+    <title>Calculo da Selic</title>
+    <style>
+      body {background: #f9f9f9 !important}
+      .inner{
+      display: inline-block;}
+    </style>
+    
+  </head>
+  <body>
+    <form>
+        <div class="form-group row">
+            <label for="process class="col-sm-2 col-form-label">Processo</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="process" placeholder="Para sua referência apenas">
+            </div>
+          </div>
+        <div class="form-group row">
+          <label for="startDate class="col-sm-2 col-form-label">Data Inicial</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="startDate" placeholder="Data inicio">
+          </div>
+        </div>
+        <div class="form-group row">
+            <label for="endDate class="col-sm-2 col-form-label">Data Final</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="endDate" placeholder="Data fim">
+            </div>
+          </div>
+        <div class="form-group row">
+          <label for="intialValue" class="col-sm-2 col-form-label">Valor</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="intialValue" placeholder="Valor inicial">
+          </div>
+        </div>
+        <fieldset class="form-group">
+          <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">TAXAS</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                <label class="form-check-label" for="gridRadios1">
+                  SELIC
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="selic">
+                <label class="form-check-label" for="gridRadios2">
+                  IPCA-M
+                </label>
+              </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="form-group row">
+          <div class="col-sm-2">Manter atualizado</div>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck1">
+              <label class="form-check-label" for="gridCheck1">
+                Manter atualizado
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+        </div>
+      </form>
 </body>
 </html>
+
+{% endblock %}

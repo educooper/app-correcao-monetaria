@@ -21,15 +21,15 @@
 
 
 
-## :dart: Sobre ##
+### :dart: Sobre ###
 
-In this project we consume a public github API to recreate a new interface, creating a frontend application with reusable components, using the best practices on reactJS technology were, has used props, arrow functions and a little bit more.
-
-
-![plot](./image/print-project-git.PNG)
+Calcular a correção monetária de uma forma intuitiva e rápida é essa a missão do APP 
 
 
-## :rocket: Technologias ##
+![conceito_1](./view/templates/images/print-project-git.PNG)
+
+
+### :rocket: Technologias ###
 
 - [Docker](https://www.docker.com/) 
 - [Flask](https://flask.palletsprojects.com/en/3.0.x/)
@@ -38,7 +38,7 @@ In this project we consume a public github API to recreate a new interface, crea
 - [JSON](https://www.json.org/json-pt.html)
 
 
-## :white_check_mark: Requisitos ##
+### :white_check_mark: Requisitos ###
 
 Para atuarmos neste projeto, necessário 
 - [Docker](https://docker.com) ( e também [WSL se for Windows](https://learn.microsoft.com/pt-br/windows/wsl/install)
@@ -46,7 +46,7 @@ Para atuarmos neste projeto, necessário
 - [IDE VsCode ou o VsCodium](https://vscodium.com/)
 
 
-## :checkered_flag: Instalação ##
+### :checkered_flag: Instalação ###
 
 ```bash
 # Clone este projeto onde já gera a pasta 
@@ -66,11 +66,11 @@ $ [http://localhost:5000](http://localhost:5000)
 
 ```
 
-## :coffee: Features Adicionais
+### :coffee: Features Adicionais ###
 
 ... em breve ...
 
-## exemplo de rota
+## exemplo de rota ###
 
 ```py
         #app.py
@@ -91,7 +91,7 @@ $ [http://localhost:5000](http://localhost:5000)
             app.run(debug=True, host='0.0.0.0')
 ```
 
-## exemplo de json com taxas dos ultimos 5 dias: 
+### exemplo de json com taxas dos ultimos 5 dias: ###
 Fonte: https://api.bcb.gov.br/dados/serie/bcdata.sgs.11/dados/ultimos/5?formato=json
 
 ```json
@@ -118,14 +118,21 @@ Fonte: https://api.bcb.gov.br/dados/serie/bcdata.sgs.11/dados/ultimos/5?formato=
   }
 ]
 ```
-## :book: Autores
+### :book: Autores ###
 DANIELA MIDORI SIRANO
-DANILO RAFAEL 
+
+DANILO RAFAEL
+
 EDUARDO DE SA CUPERTINO
+
 HELOÍSA OLIVEIRA DA SILVA
+
 LUCIANO LEITE DA COVA
+
 MATHEUS DOS ANJOS MELO
+
 MATHIAS NIASHI
+
 MARIA DILMA FERREIRA DE OLIVEIRA
 
 
