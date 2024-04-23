@@ -16,7 +16,7 @@
   <a href="#white_check_mark-requisitos">Requisitos</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-instalacao">Instalação</a> &#xa0; | &#xa0;
   <!-- <a href="#memo-license">License</a> &#xa0; | &#xa0; -->
-  <a href="#book-autores" target="_blank">Autores/a>
+  <a href="#book-autores" target="_blank">Autores</a>
 </p>
 
 
