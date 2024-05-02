@@ -41,7 +41,7 @@ Calcular a correção monetária de uma forma intuitiva e rápida é essa a miss
 ### :white_check_mark: Requisitos ###
 
 Para atuarmos neste projeto, necessário 
-- [Docker](https://docker.com) ( e também [WSL se for Windows](https://learn.microsoft.com/pt-br/windows/wsl/install)
+- [Docker](https://docker.com) ( e também [WSL se for Windows](https://learn.microsoft.com/pt-br/windows/wsl/install))
 - [Python](https://www.python.org/downloads/)
 - [IDE VsCode ou o VsCodium](https://vscodium.com/)
 
@@ -118,7 +118,8 @@ Fonte: https://api.bcb.gov.br/dados/serie/bcdata.sgs.11/dados/ultimos/5?formato=
   }
 ]
 ```
-### :book: Autores ###
+### :mortar_board: Autores ###
+
 DANIELA MIDORI SIRANO
 
 DANILO RAFAEL
@@ -135,6 +136,47 @@ MATHIAS NIASHI
 
 MARIA DILMA FERREIRA DE OLIVEIRA
 
+
+### :book: Referências ###
+
+[Como processar dados de solicitação de entrada no Flask](https://www.digitalocean.com/community/tutorials/processing-incoming-request-data-in-flask-pt) 
+
+##Exemplo de como seria uma função python para capturar e calcular SELIC - by chatGPT I.A.##
+```py
+from Flask import requests
+from datetime import datetime, timedelta
+
+def get_selic_daily_rate(date):
+    url = f'https://api.bcb.gov.br/dados/serie/bcdata.sgs.11/dados?formato=json&dataInicial={date}&dataFinal={date}'
+    response = requests.get(url)
+    if response.status_code == 200:
+        data = response.json()
+        if data:
+            return float(data[0]['valor'])
+    return None
+# Essas variáveis podem ser capturadas por meio de formulario 
+def calculate_interest(start_date, end_date, initial_value):
+    current_date = start_date
+    accumulated_interest = 0
+    while current_date < end_date:
+        selic_rate = get_selic_daily_rate(current_date.strftime('%d/%m/%Y'))
+        if selic_rate is not None:
+            accumulated_interest += selic_rate / 100
+        current_date += timedelta(days=1)
+    final_value = initial_value * (1 + accumulated_interest)
+    return final_value
+
+# Exemplo de uso
+# Este pritf pode ser encapsulado em uma tag HTML de saída, em uma página de resultado ou div oculta que ganha status de visible=block ao invés de visible=hidden
+# o que voces acham. Não testei estes calculos...
+
+valor_inicial = 1000  # Valor inicial em reais
+data_inicio = datetime(2024, 1, 1)  # Data de início
+data_atual = datetime(2024, 4, 18)  # Data atual
+valor_atualizado = calculate_interest(data_inicio, data_atual, valor_inicial)
+print(f"O valor atualizado é: R${valor_atualizado:.2f}")
+
+```
 
 Obrigado a [Univesp](https://univesp.br) pela oportunidade do Presente Projeto.
 
